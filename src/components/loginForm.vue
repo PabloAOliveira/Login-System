@@ -16,9 +16,8 @@
     Senha
     <a
       class="text-caption text-decoration-none text-blue"
-      href="#"
-      rel="noopener noreferrer"
-      target="_blank"
+      style="cursor: pointer"
+      @click="$emit('setItem', 2)"
     >
       Esqueceu sua senha?</a
     >
@@ -54,9 +53,8 @@
   <v-card-text class="text-center">
     <a
       class="text-blue text-decoration-none"
-      href="#"
-      rel="noopener noreferrer"
-      target="_blank"
+      style="cursor: pointer"
+      @click="$emit('setItem', 1)"
     >
       Cadastrar-se <v-icon icon="mdi-chevron-right"></v-icon>
     </a>

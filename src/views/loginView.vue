@@ -14,13 +14,31 @@
     >
       <v-window v-model="item">
         <v-window-item value="1">
-          <login-form />
+          <loginForm
+            @setItem="
+              (i) => {
+                item = i;
+              }
+            "
+          />
         </v-window-item>
         <v-window-item value="2">
-          <NewAccountForm />
+          <newAccountForm
+            @setItem="
+              (i) => {
+                item = i;
+              }
+            "
+          />
         </v-window-item>
         <v-window-item value="3">
-          <ForgotPasswordForm />
+          <forgotPasswordForm
+            @setItem="
+              (i) => {
+                item = i;
+              }
+            "
+          />
         </v-window-item>
       </v-window>
     </v-card>
@@ -29,8 +47,9 @@
 
 <script setup>
 import loginForm from "../components/loginForm.vue";
+import newAccountForm from "../components/newAccountForm.vue";
+import forgotPasswordForm from "../components/forgotPasswordForm.vue";
 import { ref } from "vue";
 
-const visible = ref(false);
 const item = ref("1");
 </script>
